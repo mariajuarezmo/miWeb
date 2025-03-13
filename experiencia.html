@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades</title>
+    <style>
+          /* Experiencia */
+        /* Contenedor principal */
+
+    #experiencia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    background-color: #fff8f9;
+    position: relative;
+    width: 100%;
+    }
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cada experiencia */
+.experience-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Línea de tiempo */
+.experience-item::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+/* Cabecera de cada experiencia */
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el título del puesto */
+.experience-header h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Fecha de la experiencia */
+.experience-date {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+/* Datos generales */
+.experience-location,
+.experience-type,
+.experience-company {
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin: 5px 0;
+}
+
+/* Descripción */
+.experience-description {
+    font-size: 1rem;
+    color: var(--gray-color);
+    line-height: 1.5;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-date {
+        margin-top: 5px;
+    }
+}
+    </style>
+</head>
+<body>
+
+
+<section id="experiencia">
+    <h2 class="section-title">Experiencia</h2>
+    <div class="experience-container">
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>Profesor Particular</h3>
+                <span class="experience-date">Junio 2024 - Presente</span>
+            </div>
+            <p class="experience-location">Madrid (España)</p>
+            <p class="experience-type">Tiempo Parcial</p>
+            <p class="experience-description">Enseño a estudiantes de segundo y tercer año de Ingeniería Informática temas como Inteligencia Artificial, Bases de Datos, lenguajes de programación, algoritmos, estructuras de datos y desarrollo de software.</p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>Personal de Catering</h3>
+                <span class="experience-date">Julio 2024 - Presente</span>
+            </div>
+            <p class="experience-company">Do Eat</p>
+            <p class="experience-location">Madrid (España)</p>
+            <p class="experience-type">Tiempo Parcial</p>
+            <p class="experience-description">Colaboro en la presentación de alimentos, emplatados, servicio de cocina, montaje de eventos y atención al cliente para eventos de catering.</p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>Dependienta de ventas</h3>
+                <span class="experience-date">Junio 2023 - Julio 2023</span>
+            </div>
+            <p class="experience-company">Stradivarius, Inditex Group</p>
+            <p class="experience-location">Madrid (España)</p>
+            <p class="experience-description">Adquirí experiencia en atención al cliente, gestión de inventario y ventas en el sector textil.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!-- sobreMi.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+    <style>
+            /* Sobre mí */
+
+            #sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    background-color: #fff8f9;
+    position: relative;
+    width: 100%;
+}
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-color);
+        }
+        
+        .education {
+            margin-top: 2rem;
+        }
+        
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-title {
+            font-weight: 600;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <section id="sobre-mi">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-container">
+            <img src="img/fotoSinFondo.png" alt="Foto de perfil" class="about-img">
+            <div class="about-text">
+                <h3>Estudiante de Ingeniería Informática</h3>
+                <p>Estudiante de tercer año de Ingeniería Informática con sólida base en desarrollo de software, algoritmos y resolución de problemas. Apasionada por contribuir con soluciones innovadoras en entornos colaborativos y dinámicos, con interés en aplicar conocimientos técnicos a proyectos reales.</p>
+                
+                <div class="education">
+                    <h3>Educación</h3>
+                    <div class="education-item">
+                        <p class="education-title">Grado en Ingeniería Informática</p>
+                        <p>Universidad Europea, Madrid (Nota media: 8.9)</p>
+                        <p>Prevista graduación: 2026</p>
+                    </div>
+                    <div class="education-item">
+                        <p class="education-title">Bachillerato de Excelencia</p>
+                        <p>IES Margarita Salas, Madrid (Nota media: 8.85)</p>
+                    </div>
+                </div>
+                
+                <div class="languages">
+                    <h3>Idiomas</h3>
+                    <p>Español Nativo, Inglés Avanzado, Francés Intermedio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

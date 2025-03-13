@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+
+        
+#contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    background-color: #fff8f9;
+    position: relative;
+    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center;
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    width: 100%;
+
+    margin: 0 auto; /* Asegura centrado horizontal */
+}
+
+
+
+#contacto::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(249, 156, 193, 0.1);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    z-index: 0;
+}
+
+#contacto::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(249, 156, 193, 0.07);
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    z-index: 0;
+}
+
+#contacto .section-title {
+    color: #f26ca7;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+#contacto .section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #f26ca7;
+    margin: 15px auto 0;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.contact-card {
+
+    max-width: 500px; /* Limita el ancho del card */
+    text-align: center;
+    max-width: 500px; /* Limita el ancho del card */
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.contact-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #f26ca7, #ff9cc4);
+}
+
+.contact-card h3 {
+    font-size: 28px;
+    color: #333;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.contact-subtitle {
+    color: #777;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff8f9;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    background-color: #fff0f3;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f26ca7, #ff9cc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    color: white;
+    font-size: 22px;
+}
+
+.contact-details h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-link {
+    color: #f26ca7;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+    word-break: break-word;
+}
+
+.contact-link:hover {
+    color: #d24c87;
+    text-decoration: underline;
+}
+
+.contact-details p {
+    color: #555;
+    font-size: 16px;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.social-media h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f26ca7;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #f26ca7;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Adaptación para pantallas más grandes */
+@media (min-width: 768px) {
+    .contact-items {
+        gap: 30px;
+    }
+    
+    .contact-item {
+        padding: 25px;
+    }
+}
+
+/* Adaptación para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 30px 20px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contact-details {
+        width: 100%;
+    }
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.contact-form {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+</style>
+</head>
+
+<body>
+<section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-container">
+        <div class="contact-card">
+            <h3>Conectemos</h3>
+            <p class="contact-subtitle">Estoy disponible para nuevas oportunidades y colaboraciones</p>
+            
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Correo Electrónico</h4>
+                        <a href="mailto:maria.juarezmolera04@gmail.com" class="contact-link">maria.juarezmolera04@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Teléfono</h4>
+                        <a href="tel:+34684176025" class="contact-link">+34 684 176 025</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Ubicación</h4>
+                        <p>Majadahonda, Madrid, España</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-media">
+                <h4>Sígueme en redes sociales</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

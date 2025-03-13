@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <style>
+      
+      #proyectos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    background-color: #fff8f9;
+    position: relative;
+    width: 100%;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Change to 4 columns per row */
+    gap: 2rem;
+    width: 100%;
+}
+
+/* For responsive design, you might want to add media queries */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+        
+        .project-card {
+            background-color: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-img {
+        
+            width: 100%; /* La imagen ocupa todo el ancho disponible */
+            height: 180px; /* Altura fija para mantener uniformidad */
+            object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+            display: block; /* Elimina espacios extra */
+            border-top-left-radius: 10px; /* Bordes redondeados arriba */
+            border-top-right-radius: 10px;
+            background-color: #fff; /* Fondo blanco para imágenes con transparencia */
+        }
+
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .project-description {
+            color: var(--gray-color);
+            margin-bottom: 1rem;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-tag {
+            background-color: var(--light-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="img/eventify.png" alt="Eventify" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Eventify</h3>
+                    <p class="project-description">Aplicación web para eventos comunitarios que permite la creación, edición y visualización de eventos con funciones de registro e inicio de sesión de usuarios.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="img/logo_smartcart.png" alt="SmartCart" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">SmartCart</h3>
+                    <p class="project-description">Sistema de recomendación de precios para productos de supermercados con funcionalidades de predicción y chatbot para la creación de recetas personalizadas.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="img/filmMatch.png" alt="FilmMatch" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">FilmMatch</h3>
+                    <p class="project-description">Sistema de recomendación de películas que sugiere títulos alineados con las preferencias del usuario utilizando técnicas como similitud coseno y NLP.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">TF-IDF</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="img/safesense.png" alt="SafeSense" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">SafeSense</h3>
+                    <p class="project-description">Sistema de seguridad utilizando sensores para monitorizar y controlar el acceso en negocios y alertar sobre intentos de acceso no autorizado.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">Scene Builder</span>
+                        <span class="tech-tag">Arduino IDE</span>
+                        <span class="tech-tag">ESP32</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
